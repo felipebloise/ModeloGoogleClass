@@ -36,11 +36,11 @@ a:hover{
 }
 
 /*Formatação de menu*/
-nav#menu{
+nav#nav{
     display: block;
 }
 
-nav#menu ul {
+nav#nav ul {
     list-style: none;
     text-transform: uppercase;
     position: absolute;
@@ -48,12 +48,12 @@ nav#menu ul {
     left: 500px;
 }
 
-nav#menu li{
+nav#nav li{
     display: inline-block;/*alinhar menu*/
     
 }
 
-nav#menu a {
+nav#nav a {
     color: #000000;
     text-decoration: none;
     background-color: #dddddd;
@@ -62,7 +62,7 @@ nav#menu a {
     transition: background-color 1s;
 }
 
-nav#menu a:hover{
+nav#nav a:hover{
     color: #ffffff;
     background-color: #606060;
 }
