@@ -1,48 +1,68 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tudo sobre a revolução do Google Glass</title>
-    <link rel="stylesheet" type="text/css" href="_estilo/specs.css">
-    <link rel="stylesheet" type="text/css" href="_estilo/estilo.css">
-    <link rel="shortcut icon" href="_imagens/google.png" type="image/x-icon">
-    <script src="_javascript/funcoes.js"></script>
-</head>
-
-<body>
-    <div id="interface">
-        <header id="cabecalho">
-            <hgroup>
-                <h1>Google Glass</h1>
-                <h2>A revolução do Google está chegando</h2>
-            </hgroup>
-
-            <img id="icone" src="./_imagens/especificacoes.png" alt="Oculos Google Glass">
-
-            <nav id="menu">
-                <h1>Menu Principal</h1>
-                <ul type="disc">
-                    <li onmouseover="mudaFoto('_imagens/home.png')"
-                        onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="index.html">Home</a></li>
-                    <li onmouseover="mudaFoto('_imagens/especificacoes.png')"
-                        onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="specs.html">Especificações</a>
-                    </li>
-                    <li onmouseover="mudaFoto('_imagens/fotos.png')"
-                        onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fotos.html">Fotos</a></li>
-                    <li onmouseover="mudaFoto('_imagens/multimidia.png')"
-                        onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="multimidia.html">Multimídia</a>
-                    </li>
-                    <li onmouseover="mudaFoto('_imagens/contato.png')"
-                        onmouseout="mudaFoto('_imagens/especificacoes.png')"><a href="fale-conosco.html">Fale
-                            conosco</a></li>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Tudo sobre a revolução do Google Glass</title>
+        <link rel="shortcut icon" href="_imagens/google.png" type="image/x-icon">
+        <link rel="stylesheet" type="text/css" href="_estilo/estilo.css">
+        <link rel="stylesheet" type="text/css" href="_estilo/specs.css">
+    
+        <!-- ESTILOS PARA ESTA PÁGINA -->
+        <!-- Nesse caso, este estilo é apenas para inserir imagens -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <!-- Fonte -->
+        <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap" rel="stylesheet">
+        <!-- Estilos -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+            integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <!-- Scripts (jQuery não pode ser o slim que vem do Boostrap) -->
+        <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+            integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
+        <!-- Font Awesome -->
+        <script src="https://kit.fontawesome.com/bf7e05c402.js" crossorigin="anonymous"></script>
+        <!-- Progress Bar -->
+        <script src="js/progressbar.min.js"></script>
+        <!-- Parallax -->
+        <script src="https://cdn.jsdelivr.net/parallax.js/1.4.2/parallax.min.js"></script>
+    
+        <script src="_javascript/funcoes.js"></script>
+    
+    </head>
+    
+    <body>
+        <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
+            <a class="navbar-brand" href="index.html">
+                <img id="logo" src="_imagens/google.png" alt="hDC Agency"> <span>Google Glass</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-links"
+                aria-controls="navbar-links" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+    
+            <div class="collapse navbar-collapse justify-content-end" id="navbar-links">
+                <ul class="navbar-nav navbar-right">
+                    <li><a class="nav-item nav-link" href="index.html">Home</a></li>
+                    <li><a class="nav-item nav-link" href="specs.html">Especificações</a></li>
+                    <li><a class="nav-item nav-link" href="fotos.html">Fotos</a></li>
+                    <li><a class="nav-item nav-link" href="multimidia.html">Multimídia</a></li>
+                    <li><a class="nav-item nav-link" href="fale-conosco.html">Fale conosco</a></li>
                 </ul>
-            </nav>
-        </header>
+            </div>
+            </div>
+        </nav>
 
-        <section id="corpo-full">
+    <div id="interface" class="container-fluid">
+
+        <section id="corpo-full" class="container" >
             <article id="noticia-principal">
                 <header id="cabecalho-artigo">
                     <hgroup>
@@ -53,12 +73,11 @@
                     </hgroup>
                 </header>
 
-
                 <p>Clique em qualquer área destacada da imagem para ter mais informações sobre os recursos do Google
                     Glass. Qualquer ponto vermelho vai te levar a um lugar cheio de novas informações.</p>
 
-                <section id="conteudo">
-                    <img src="_imagens/glass-esquema-marcado.jpg" alt="Esquema do Google Class" usemap="#meumapa"> 
+                <section id="conteudo" class="row">
+                    <div class="col-lg-6 col-md-6"><img src="_imagens/glass-esquema-marcado.jpg" alt="Esquema do Google Class" usemap="#meumapa" id="img"> </div>
                     <map name="meumapa">
                         <area shape="poly" coords="183,220,265,208,266,242,186,254" href="google-glass.html#tela"
                             target="janela" />
@@ -67,18 +86,23 @@
                         <area shape="poly" coords="28,143,83,216,84,249,27,169" href="google-glass.html#sensores"
                             target="janela" />
                     </map>
-                    <iframe src="google-glass.html" frameborder="0" name="janela" id="frame-spec"></iframe>
+                    <div class="col-lg-6 col-md-6"><iframe src="google-glass.html" frameborder="0" name="janela" id="frame-spec"></iframe></div>
                 </section>
             </article>
-        </section>
-
-        <footer id="rodape">
-            <p>Copyright &copy; 2022 Felipe Bloise com base no Curso do Gustavo Guanabara <br>
-                <a href="http://facebook.com/cursoemvideo" target="_blank">Facebook</a> | <a
-                    href="http://twiter.com/cursoemvideo" target="_blank">Twitter</a>
-            </p>
+        
+        <footer id="rodape" class="container">
+                <div>
+                    <p>&copy; 2022 Felipe Bloise</p>
+                    <p>Estudo com base inicial no Curso em Video</p>
+                    <p>
+                        <a href="http://facebook.com/cursoemvideo" target="_blank">Facebook</a> | <a
+                            href="http://twiter.com/cursoemvideo" target="_blank">Twitter</a>
+                    </p>
+                </div>
         </footer>
+        </section>
     </div>
+
 </body>
 
 </html>

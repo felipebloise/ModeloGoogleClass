@@ -5,28 +5,24 @@
     src: url("../_fonts/bubblegum-sans-regular.otf");
 }
 body{
-    background-color: #dddddd;
-    color: rgba(0,0,0,1);
     font-family: Arial, sans-serif;
 }
 
-div#interface {
-    width: 900px;
-    background-color: #ffffff;
-    margin: -20px auto 10px auto;
-    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
-    padding: 10px;
+section.container{
+    background-color: #f4f4f4;
 }
 
 p{
     text-align: justify;
     text-indent: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0;
 }
 
 a{
     text-decoration: none;
-    color: #888888;
-    
+    color: #888888;    
 }
 
 a:hover{
@@ -35,40 +31,17 @@ a:hover{
     cursor: pointer;
 }
 
-/*Formatação de menu*/
-nav#nav{
-    display: block;
+/*Barra de navegação*/
+.navbar{
+    background-color: #000000;
+}
+#nav-container{
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
-nav#nav ul {
-    list-style: none;
-    text-transform: uppercase;
-    position: absolute;
-    top: -10px;
-    left: 500px;
-}
-
-nav#nav li{
-    display: inline-block;/*alinhar menu*/
-    
-}
-
-nav#nav a {
-    color: #000000;
-    text-decoration: none;
-    background-color: #dddddd;
-    padding: 10px;
-    margin: 1px;
-    transition: background-color 1s;
-}
-
-nav#nav a:hover{
-    color: #ffffff;
-    background-color: #606060;
-}
-
-nav#menu h1{
-    display: none; /*Ocultar h1 do menu*/
+#logo{
+    width: 25px;
 }
 
 /*Formatação de cabeçalho*/
@@ -79,26 +52,12 @@ header#cabecalho img#icone{
 }
 
 header#cabecalho {
-    border-bottom: 1px #606060 solid;
-    height: 150px;
-    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
+    height: 0px;    
 }
 
-header#cabecalho h1 {
-    font-family: 'FonteLogo', sans-serif;
-    font-size: 30pt;
-    color: #606060;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
-    padding: 0px;
-    margin-bottom: 0px;
-}
-
-header#cabecalho h2 {
-    font-family: 'Titillium Web', sans-serif;
-    color: #888888;
+nav span{
     font-size: 15pt;
-    padding: 0px;
-    margin-top: 2px;
+    margin-left: 5px;
 }
 
 /*Formatar foto com legenda sobre ela*/
@@ -133,14 +92,6 @@ figure.foto-legenda:hover figcaption{
 
 /*Formantando section*/
 
-section#corpo {
-    display: block;
-    width: 500px;
-    float: left;
-    border-right: 1px solid #dddddd;
-    padding-right: 15px;
-}
-
 article#noticia-principal h2{
     font-size: 12pt;
     color: #606060;
@@ -155,6 +106,7 @@ article#noticia-principal h2{
     color: #cecece;
 }
 
+
 header#cabecalho-artigo h1{
     font-family: 'FonteLogo', sans-serif;
     font-size: 20pt;
@@ -165,7 +117,7 @@ header#cabecalho-artigo h1{
 header#cabecalho-artigo h2{
     font-size: 13pt;
     color: #cecece;
-    background-color: #ffffff;
+    background-color: #f4f4f4;
     margin: 0px;
     padding: 0px;
 }
@@ -212,14 +164,8 @@ table#tabelaspec caption span{
     margin-top: 10px;
 }
 
-aside#lateral {
-    display: block;
-    width: 350px;
-    float: right;
-    background-color: #dddddd;
-    padding: 10px;
-    margin-top: 10px;
-    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+aside#lateral {     
+    background-color:#f4f4f4;
 }
 
 aside#lateral h1{
@@ -233,291 +179,58 @@ aside#lateral h2{
     font-size: 12pt;
     color: #ffffff;
     background-color: #606060;
-    padding: 5px 0px 5px 10px;
-    margin: 10px 0px 10px 0px;
+    padding: 5px 5px 5px 5px;    
+}
+aside#lateral p{
+    margin: 0;
+    padding-bottom: 10px;
 }
 
 /*Formatação videos*/
-
 video#home-video1{
-    display: block;
-    position: relative;
-    bottom: 10px;
-    width: 500px;
-    height: 350px;
+    width:100%;
+    margin: auto;
 }
 
 video#home-video2{
-    display: block;
-    position: relative;
-    bottom: 10px;
-    width: 350px;
-    height: 250px;
+   width: 100%;
+   margin: auto;
+   background-color: #f4f4f4;
 }
 
-@media (max-width: 600px) {
-
-body{
+/*Responsividade para telas de 600px*/
+div#interface.container-fluid{
     background-color: #dddddd;
-    color: rgba(0,0,0,1);
-    font-family: Arial, sans-serif;
 }
 
-div#interface {
-    width: 500px;
-    background-color: #ffffff;
-    margin: -20px auto 10px auto;
-    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
-    padding: 10px;
-}
-
-p{
-    text-align: justify;
-    text-indent: 50px;
-}
-
-a{
-    text-decoration: none;
-    color: #888888;
-    
-}
-
-a:hover{
-    text-decoration: underline;
-    color: #606060;
-    cursor: pointer;
-}
-
-/*Formatação de menu
-nav#menu{
-    display: block;
-}
-
-nav#menu ul {
-    list-style: none;
-    text-transform: uppercase;
-    position: absolute;
-    top: -10px;
-    left: 500px;
-}
-
-nav#menu li{
-    display: inline-block;/*alinhar menu
-    
-}
-
-nav#menu a {
-    color: #000000;
-    text-decoration: none;
-    background-color: #dddddd;
-    padding: 10px;
-    margin: 1px;
-    transition: background-color 1s;
-}
-
-nav#menu a:hover{
-    color: #ffffff;
-    background-color: #606060;
-}
-
-nav#menu h1{
-    display: none; /*Ocultar h1 do menu
-}
-*/
-
-/*Formatação de cabeçalho*/
-
-/*header#cabecalho img#icone{
-    position: absolute;
-    left: 1040px;
-    top: 70px;
-}*/
-
-header#cabecalho {
-    border-bottom: 1px #606060 solid;
-    height: 150px;
-    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
-}
-
-header#cabecalho h1 {
-    font-family: 'FonteLogo', sans-serif;
-    font-size: 30pt;
-    color: #606060;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
-    padding: 0px;
-    margin-bottom: 0px;
-}
-
-header#cabecalho h2 {
-    font-family: 'Titillium Web', sans-serif;
-    color: #888888;
-    font-size: 15pt;
-    padding: 0px;
-    margin-top: 2px;
-}
-
-/*Formatar foto com legenda sobre ela*/
-
-figure.foto-legenda{
-    position: relative;
-    border: 8px solid white;
-    box-shadow: 1px 1px 4px black;
-    margin-left: -5px;
-}
-
-figure.foto-legenda img{
-    width: 100%;
-    height: 100%;
-}
-
-figure.foto-legenda figcaption{
-    opacity: 0;
-    position: absolute;
-    top: 0px;
-    background-color: rgba(0,0,0,.4);
-    color: white;
-    width: 100%;
-    height: 100%;
-    padding: 10px;
-    box-sizing: border-box;
-    transition: opacity 1s;
-}
-
-figure.foto-legenda:hover figcaption{
-    opacity: 1;
-}
-
-/*Formantando section*/
-
-section#corpo {
-    display: block;
-    width: 495px;
-    float: left;
-    padding-right: 15px;
-}
-
-article#noticia-principal h2{
-    font-size: 12pt;
-    color: #606060;
-    background-color: #dddddd;
-    padding: 5px 0px 5px 10px;
-    margin: 10px 0px 10px 0px;
-}
-
-.direita{
-    text-align: right;
-    font-size: 10pt;
-    color: #cecece;
-}
-
-header#cabecalho-artigo h1{
-    font-family: 'FonteLogo', sans-serif;
-    font-size: 20pt;
-    color: #606060;
-    margin-bottom: 0px;
-    margin-top: 0px;
-}
-header#cabecalho-artigo h2{
-    font-size: 13pt;
-    color: #cecece;
-    background-color: #ffffff;
-    margin: 0px;
-    padding: 0px;
-}
-header#cabecalho-artigo h3{
-    font-size: 12pt;
-    color: #606060;
-}
-
-table#tabelaspec{
-    border: 1px solid #606060;
-    border-spacing: 0px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-table#tabelaspec td{
-    border: 1px solid #606060;
-    padding: 10px;
-    text-align: center;
-    vertical-align: middle;
-}
-
-table#tabelaspec td.ce{
-    color: #ffffff;
-    background-color: #606060;
-    vertical-align: top;
-    text-align: right;
-    font-weight: bold;
-}
-table#tabelaspec td.cd{
-    background-color: #cecece;
-    text-align: left;
-}
-table#tabelaspec caption{
-    color: #888888;
-    font-size: 13pt;
-    font-weight: bolder;
-}
-table#tabelaspec caption span{
-    display: block;
-    float: right;
-    color: #000000;
-    font-size: 8pt;
-    margin-top: 10px;
-}
-
-aside#lateral {
-    display: block;
-    width: 480px;
-    background-color: #dddddd;
-    padding: 10px;
-    margin-top: 10px;
-    
-}
-
-aside#lateral h1{
-    font-family: 'FonteLogo', sans-serif;
-    font-size: 20pt;
-    color: #606060;
-    margin-bottom: 0px;
-    margin-top: 0px;    
-}
-aside#lateral h2{
-    font-size: 12pt;
-    color: #ffffff;
-    background-color: #606060;
-    padding: 5px 0px 5px 10px;
-    margin: 10px 0px 10px 0px;
-}
-
-/*Formatação videos*/
-
-video#home-video1{
-    display: block;
-    position: relative;
-    bottom: 10px;
-    width: 500px;
-    height: 350px;
-}
-
-video#home-video2{
-    display: block;
-    position: relative;
-    bottom: 10px;
-    width: 350px;
-    height: 250px;
-}
-
+@media (max-width: 2770px){
+    header#cabecalho-artigo {
+        margin-top: 3.57rem;
+    }
 }
 
 /*Formatação rodapé*/
 
-footer#rodape{
-    clear: both;
-    border-top: 1px solid #dddddd;
+footer.container{
+    background-color: #f4f4f4;
+    border-top: 1px solid black;
+}
+
+footer#rodape{    
+    padding: 0;
+    margin: 0;
+}
+
+footer#rodape a {
+    color: #888888;
 }
 
 footer#rodape p {
     text-align: center;
+    margin: 0;
+}
+
+footer#rodape div{
+    padding-top: 10px;
+    padding-bottom: 10px;
 }
