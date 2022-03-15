@@ -5,101 +5,43 @@
     src: url("../_fonts/bubblegum-sans-regular.otf");
 }
 body{
-    background-color: #dddddd;
-    color: rgba(0,0,0,1);
     font-family: Arial, sans-serif;
-}
-
-div#interface {
-    width: 900px;
-    background-color: #ffffff;
-    margin: -20px auto 10px auto;
-    box-shadow: 0px 0px 10px rgba(0,0,0,.5);
-    padding: 10px;
 }
 
 p{
     text-align: justify;
     text-indent: 50px;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0;
 }
 
-a{
-    text-decoration: none;
-    color: #888888;
-    
+/*Barra de navegação*/
+.navbar{
+    background-color: #444;
+    color: #fff;
 }
 
-a:hover{
-    text-decoration: underline;
-    color: #606060;
-    cursor: pointer;
+#logo{
+    height: 30px;
 }
 
-/*Formatação de menu*/
-nav#menu{
-    display: block;
+span{
+    color: #fff;
+    justify-content: center;
+    font-size: 14pt;
 }
 
-nav#menu ul {
-    list-style: none;
-    text-transform: uppercase;
-    position: absolute;
-    top: -10px;
-    left: 500px;
+.navbar a{
+    color: #f4f4f4;
 }
 
-nav#menu li{
-    display: inline-block;/*alinhar menu*/
-    
-}
-
-nav#menu a {
+.navbar a:hover{
     color: #000000;
-    text-decoration: none;
-    background-color: #dddddd;
-    padding: 10px;
-    margin: 1px;
-    transition: background-color 1s;
 }
+/*Barra de navegação*/
 
-nav#menu a:hover{
-    color: #ffffff;
-    background-color: #606060;
-}
 
-nav#menu h1{
-    display: none; /*Ocultar h1 do menu*/
-}
-
-/*Formatação de cabeçalho*/
-header#cabecalho img#icone{
-    position: absolute;
-    left: 1040px;
-    top: 70px;
-}
-
-header#cabecalho {
-    border-bottom: 1px #606060 solid;
-    height: 150px;
-    background: url("../_imagens/glass-logo-peq.jpg") no-repeat 0px 80px;
-}
-
-header#cabecalho h1 {
-    font-family: 'FonteLogo', sans-serif;
-    font-size: 30pt;
-    color: #606060;
-    text-shadow: 1px 1px 1px rgba(0,0,0,.6);
-    padding: 0px;
-    margin-bottom: 0px;
-}
-
-header#cabecalho h2 {
-    font-family: 'Titillium Web', sans-serif;
-    color: #888888;
-    font-size: 15pt;
-    padding: 0px;
-    margin-top: 2px;
-}
 
 /*Formatar foto com legenda sobre ela*/
 
@@ -107,6 +49,7 @@ figure.foto-legenda{
     position: relative;
     border: 8px solid white;
     box-shadow: 1px 1px 4px black;
+    margin-top: 15px;
 }
 
 figure.foto-legenda img{
@@ -130,15 +73,12 @@ figure.foto-legenda figcaption{
 figure.foto-legenda:hover figcaption{
     opacity: 1;
 }
+/*Formatar foto com legenda sobre ela*/
+
 
 /*Formantando section*/
-
-section#corpo {
-    display: block;
-    width: 500px;
-    float: left;
-    border-right: 1px solid #dddddd;
-    padding-right: 15px;
+#conteudo-principal{
+margin-top: 90px;
 }
 
 article#noticia-principal h2{
@@ -155,6 +95,7 @@ article#noticia-principal h2{
     color: #cecece;
 }
 
+
 header#cabecalho-artigo h1{
     font-family: 'FonteLogo', sans-serif;
     font-size: 20pt;
@@ -164,14 +105,12 @@ header#cabecalho-artigo h1{
 }
 header#cabecalho-artigo h2{
     font-size: 13pt;
-    color: #cecece;
-    background-color: #ffffff;
     margin: 0px;
     padding: 0px;
 }
 header#cabecalho-artigo h3{
     font-size: 12pt;
-    color: #606060;
+    color: 0;
 }
 
 table#tabelaspec{
@@ -212,14 +151,8 @@ table#tabelaspec caption span{
     margin-top: 10px;
 }
 
-aside#lateral {
-    display: block;
-    width: 350px;
-    float: right;
-    background-color: #dddddd;
-    padding: 10px;
-    margin-top: 10px;
-    box-shadow: 2px 2px 2px rgba(0,0,0,.5);
+aside#lateral {     
+    background-color:#f4f4f4;
 }
 
 aside#lateral h1{
@@ -233,35 +166,54 @@ aside#lateral h2{
     font-size: 12pt;
     color: #ffffff;
     background-color: #606060;
-    padding: 5px 0px 5px 10px;
-    margin: 10px 0px 10px 0px;
+    padding: 5px 5px 5px 5px;    
+}
+aside#lateral p{
+    margin: 0;
+    padding-bottom: 10px;
 }
 
 /*Formatação videos*/
-
 video#home-video1{
-    display: block;
-    position: relative;
-    bottom: 10px;
-    width: 500px;
-    height: 350px;
+    width:100%;
+    margin: auto;
 }
 
 video#home-video2{
-    display: block;
-    position: relative;
-    bottom: 10px;
-    width: 350px;
-    height: 250px;
+   width: 100%;
+   margin: auto;
+   background-color: #f4f4f4;
 }
 
-/*Formatação rodapé*/
-
-footer#rodape{
-    clear: both;
-    border-top: 1px solid #dddddd;
+/*Responsividade para telas de 600px*/
+div#interface.container-fluid{
+    background-color: #dddddd;
 }
 
-footer#rodape p {
+@media (max-width: 2770px){
+    header#cabecalho-artigo {
+        margin-top: 3.57rem;
+    }
+}
+
+/* CSS FOOTER */
+#footer{
+    background-color: #444;
+    margin-top: 10px;
+    justify-content: center;
+}
+#footer-p{
+    color: #fff;
+    font-size: 10pt;
+    padding: 10px;
     text-align: center;
 }
+#footer-p a{
+    color: #888888;
+    text-decoration: none;
+}
+
+#footer-p a:hover{
+    color: #bbb;
+}
+/* CSS FOOTER */

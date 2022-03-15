@@ -5,18 +5,36 @@
     src: url("../_fonts/bubblegum-sans-regular.otf");
 }
 
-section#conteudo {
-    width: 1000px;
-    margin: auto;
+body{
+    margin: 0px;
+}
+
+.container{
+    height: 100%;
+    margin-top: 0px;
+}
+
+#noticia-principal{
+    margin-top: 90px;    
+}
+
+#footer{
+    margin-top: 83px;
+}
+
+img#img{
+    height: 100%;
+    width: 100%;
 }
 
 iframe#frame-spec{
     width: 400px;
     height: 280px;
     border: none;
-    
+    overflow: hidden;    
 }
 
 iframe#frame-spec::-webkit-scrollbar{
     display: none;
 }
+

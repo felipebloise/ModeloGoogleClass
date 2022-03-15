@@ -5,6 +5,9 @@
     src: url("../_fonts/bubblegum-sans-regular.otf");
 }
 
+section{
+    margin-top: 90px;
+}
 
 ul#album-fotos{
     width: 700px;

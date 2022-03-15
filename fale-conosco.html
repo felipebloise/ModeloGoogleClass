@@ -6,47 +6,70 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tudo sobre a revolução do Google Glass</title>
-    <link rel="stylesheet" type="text/css" href="_estilo/form.css">
+
     <link rel="shortcut icon" href="_imagens/google.png" type="image/x-icon">
+
+    <!-- Google fonts Lato 
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap" rel="stylesheet" />-->
+
+    <!-- CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" />
+
+    <!-- CSS do projeto -->
     <link rel="stylesheet" type="text/css" href="_estilo/estilo.css">
-    <script src="_javascript/funcoes.js"></script>
-    <script>
-        function calc_total(){
-            var qtd = parseInt(document.getElementById('cQtd').value);
-            tot = qtd * 1500;
-            document.getElementById('cTot').value = tot;
-        }
-    </script>
+    <link rel="stylesheet" type="text/css" href="_estilo/form.css">
+
+    <!-- JavaScript Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+
+    <!-- JavaScript para mascara -->
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
+
 </head>
 
 <body>
     <div id="interface">
-        <header id="cabecalho">
-            <hgroup>
-                <h1>Google Glass</h1>
-                <h2>A revolução do Google está chegando</h2>
-            </hgroup>
+        <!-- INICIO DA NAVBAR -->
+        <nav class="navbar navbar-expand-lg fixed-top" id="navbar">
+            <div class="container py-3">
+                <a class="navbar-brand" href="#">
+                    <img src="_imagens/google.png" id="logo" alt="Logo" />
+                    <span>Google Glass</span>
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-items"
+                    aria-controls="navbar-items" aria-expanded="false" aria-label="Toggle navigation">
+                    <i id="i-navbar" class="bi bi-list"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbar-items">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                        <li class="nav-item">
+                            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="specs.html">Especificaões</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="fotos.html">Fotos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="fale-conosco.html">Contato</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- FIM DA NAVBAR -->
 
-            <img id="icone" src="./_imagens/contato.png" alt="Oculos Google Glass">
-
-            <nav id="menu">
-                <h1>Menu Principal</h1>
-                <ul type="disc">
-                    <li onmouseover="mudaFoto('_imagens/home.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a
-                            href="index.html">Home</a></li>
-                    <li onmouseover="mudaFoto('_imagens/especificacoes.png')"
-                        onmouseout="mudaFoto('_imagens/contato.png')"><a href="specs.html">Especificações</a></li>
-                    <li onmouseover="mudaFoto('_imagens/fotos.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a
-                            href="fotos.html">Fotos</a></li>
-                    <li onmouseover="mudaFoto('_imagens/multimidia.png')" onmouseout="mudaFoto('_imagens/contato.png')">
-                        <a href="multimidia.html">Multimídia</a></li>
-                    <li onmouseover="mudaFoto('_imagens/contato.png')" onmouseout="mudaFoto('_imagens/contato.png')"><a
-                            href="fale-conosco.html">Fale conosco</a></li>
-                </ul>
-            </nav>
-        </header>
-
-        <section>
+        <!--<section>
             <article id="noticia-principal">
                 <header id="cabecalho-artigo">
                     <hgroup>
@@ -115,14 +138,110 @@
                 </form>
 
             </article>
-        </section>
+        </section>-->
 
-        <footer id="rodape">
-            <p>Copyright &copy; 2022 Felipe Bloise com base no Curso do Gustavo Guanabara <br>
-                <a href="http://facebook.com/cursoemvideo" target="_blank">Facebook</a> | <a
-                    href="http://twiter.com/cursoemvideo" target="_blank">Twitter</a>
-            </p>
-        </footer>
+        <div id="form" class="container">
+            <div class="container register">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="tab-pane fade show active text-align form-new" id="home" role="tabpanel"
+                            aria-labelledby="home-tab">
+                            <h3 class="register-heading">Entre em contato conosco</h3>
+                            <div class="row register-form">
+                                <div class="col-md-12">
+                                    <form method="post" autocomplete="off" name="google-sheet">
+                                        <div class="form-group">
+                                            <input type="text" name="Nome" class="form-control"
+                                                placeholder="Nome Completo" id="nome" value="" required=""
+                                                maxlength="60" />
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="col-12" id="conteudo3">
+                                                <div class="row ">
+                                                    <div class="col-12 col-md-6">
+                                                        <input type="text" name="Email" class="form-control"
+                                                            placeholder="Seu melhor E-mail" onblur="validarEmail()"
+                                                            onfocus="redefinirMsg()" id="email" value="" required="" />
+                                                    </div>
+                                                    <div class="col-12 col-md-6"> <span id="error-email"></span> </div>
+                                                </div>
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="Telefone" class="form-control"
+                                                    placeholder="Seu WhatsApp com DDD" id="telefone" value=""
+                                                    required="" maxlength="13" />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="text" name="Mensagem" id="mensagem" class="form-control"
+                                                    placeholder="Escreva aqui sua mensagem..." value="" required="" />
+                                            </div>
+                                            <div class="form-group">
+                                                <input type="submit" onclick="Enviar()" name="submit"
+                                                    class="btnSubmit btn-block" value="Enviar" />
+                                            </div>
+                                            <div class="form-group">
+                                                <h2 id="enviado"></h2>
+                                            </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            function Enviar() {
+                const scriptURL = 'https://script.google.com/macros/s/AKfycbyxN_aiPs5fG1tlmGn9T49wzX5EIrF963idQ7z1hnZjDsRjQQCb/exec'
+                const form = document.forms['google-sheet']
+
+                var recebe = document.getElementById("enviado")
+                var enviado = "Mensagem enviada com sucesso!";
+                recebe.innerHTML = enviado
+
+                form.addEventListener('submit', e => {
+                    e.preventDefault()
+                    fetch(scriptURL, { method: 'POST', body: new FormData(form) })
+                        .then(response => enviado)
+                        .catch(error => console.error('Error!', error.message))
+                })
+            }
+
+            $(document).ready(function () {
+                //Telefone
+                $("#telefone").mask("(99) 99999-9999");
+            });
+
+            function validarEmail() {
+                var email = document.querySelector('#email');
+                var error = document.querySelector('#error-email');
+
+                if (!email.checkValidity()) {
+                    error.innerHTML = "Email invalido";
+                }
+
+            }
+
+            function redefinirMsg() {
+                var error = document.querySelector('#error-email');
+                if (error.innerHTML == "Email invalido") {
+                    error.innerHTML = "";
+                }
+            }
+
+        </script>
 
     </div>
+
+    <!-- INICIO DO FOOTER -->
+    <footer class="container-fluid bg-dark-color" id="footer">
+        <div>
+            <p id="footer-p">
+                Projeto com base em estudo do <a href="">Curso em Video</a> por <a href="">Felipe Bloise</a>
+                &copy; 2022
+            </p>
+        </div>
+    </footer>
+    <!-- FIM DO FOOTER -->
 </body>
