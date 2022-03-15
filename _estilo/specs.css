@@ -9,6 +9,19 @@ body{
     margin: 0px;
 }
 
+.container{
+    height: 100%;
+    margin-top: 0px;
+}
+
+#noticia-principal{
+    margin-top: 90px;    
+}
+
+#footer{
+    margin-top: 83px;
+}
+
 img#img{
     height: 100%;
     width: 100%;
